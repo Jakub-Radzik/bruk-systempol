@@ -1,0 +1,45 @@
+section.contact {
+  margin-top: 100px;
+  min-height: 70vh; }
+  section.contact .responsive {
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
+    section.contact .responsive > img {
+      margin: 50px 0;
+      width: 50%; }
+      @media (max-width: 900px) {
+        section.contact .responsive > img {
+          width: 80%; } }
+    section.contact .responsive div.info {
+      width: 50%; }
+      @media (max-width: 900px) {
+        section.contact .responsive div.info {
+          width: 80%; } }
+      section.contact .responsive div.info .pair {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 30px; }
+        section.contact .responsive div.info .pair .icon {
+          width: 25%;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          section.contact .responsive div.info .pair .icon img {
+            width: 80%; }
+        section.contact .responsive div.info .pair .description {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 75%;
+          text-align: center; }
+          @media (max-width: 400px) {
+            section.contact .responsive div.info .pair .description {
+              font-size: 12px; } }
+
+/*# sourceMappingURL=contact.css.map */

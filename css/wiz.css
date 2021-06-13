@@ -1,0 +1,35 @@
+.wiz {
+  width: 534px;
+  height: 354px;
+
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s; }
+
+  .wiz:hover {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg); }
+  .wiz .front {
+    height: 354px;
+    width: 534px;
+    background: red;
+    position: absolute;
+    background: url("../img/strona1.png");
+    background-position: center;
+    background-size: cover; }
+  .wiz .back {
+    height: 354px;
+    width: 534px;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    background: url("../img/strona2.png") center;
+    background-size: cover; }
+
+@media (max-width: 600px) {
+  .wiz, .wiz .front, .wiz .back {
+    width: 267px;
+    height: 177px;
+  }
+
+/*# sourceMappingURL=wiz.css.map */

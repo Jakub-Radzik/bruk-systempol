@@ -1,0 +1,28 @@
+$ext: 534px
+$h: 354px
+    
+.wiz
+    width: $ext
+    height: $h
+    // border : 1px solid black
+    transform-style: preserve-3d
+    &:hover
+        transform: rotateY(180deg)
+    transition-duration: 2s
+    .front
+        height: $h
+        width: $ext
+        // border : 1px solid black
+        background: red
+        position: absolute
+        background: url('/img/strona1.png')
+        background-position: center
+        background-size: cover
+    .back
+        height: $h
+        // border : 1px solid black
+        width: $ext
+        transform: rotateY(180deg)
+        background: url('/img/strona2.png')
+        background-position: center
+        background-size: cover

@@ -1,0 +1,322 @@
+//FONTS
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap')
+@import '_variables'
+@import 'contact'
+
+
+//STYLE RESET
+body, h1, ul
+    margin: 0
+    padding: 0
+
+a
+    text-decoration: none
+    color: black
+
+    
+    
+//HEADER AND MENU
+
+body
+    background-color: white
+
+header
+    z-index: 200
+    background-color: white
+    height: $header_height
+    position: fixed
+    top: 0
+    width: 100%
+    box-shadow: 0 2px 11px 5px #ebebeb
+    .responsive
+        margin: auto
+        height: $header_height
+        width: 100%
+        max-width: $responsive
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        .logo
+            img
+                height : 80px
+                @include for-tablet-portrait-up
+                    height: 50px
+
+        div.mobile-btn
+            display: none
+            @include for-tablet-landscape-up
+                display: inline
+            img
+                height: 50px
+                margin-right: 10px 
+                @include for-tablet-portrait-up
+                    height: 30px
+
+        nav.standard
+            display: inline
+
+            @include for-tablet-landscape-up
+                display: none
+            ul
+                list-style-type: none
+                display: flex
+                justify-content: space-between
+                align-items: center
+
+                li
+                    margin-right: 20px
+                    a
+                        color: $color_1
+                        text-decoration: none
+                        font-size: 20px
+                        transition-duration: 0.7s
+
+                        &:hover
+                            color: $color_3
+
+    nav.mobile
+        display: none
+        ul
+            list-style-type: none
+            width: 100%
+
+            a
+                color: $color_1
+                text-decoration: none
+                font-size: 20px
+                transition-duration: 0.7s
+                width: 100%
+
+                &:hover
+                    color: $color_3
+                
+                li
+                    width: 100%
+                    height: 40px
+                    background: white
+                    display: flex
+                    justify-content: center
+                    align-items: center
+    // copied^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+//SECTION PRESENTATION COPIED
+
+main
+    font-family: 'Raleway', sans-serif
+    section.presentation
+        width: 100%
+        margin-top: $header_height
+        height: 600px
+        background-image: url("../img/background-max.jpg")
+        background-repeat: no-repeat 
+        background-position: center bottom
+        background-size: cover
+
+        .responsive
+            margin: auto
+            width: 100%
+            max-width: $responsive
+            height: 100%
+            display: flex
+            align-items: center
+            @include for-desktop-up
+                justify-content: center
+
+            .information
+                color: $color_2
+                background: rgba(255,255,255,0.8)
+                height: 70%
+                width: 35%
+                @include for-desktop-up
+                    height: 80%
+                    width: 55%
+                @include for-tablet-portrait-up
+                    width: 80%
+                display: flex
+                flex-direction: column
+                justify-content: space-evenly
+                align-items: center
+                h1
+                    font-size: 2.5em
+
+                    @include for-tablet-portrait-up
+                        font-size: 1.5em
+                    letter-spacing: 6px
+                    font-family: 'Bebas Neue', cursive
+                p
+                    font-size: 19px
+                    @include for-tablet-portrait-up
+                        font-size: 15px
+                    text-align: justify
+                    width: 70%
+    
+    section.tasks
+        width: 100%
+        height: 400px
+        @include for-tablet-landscape-up
+            height: 400px
+        @include for-tablet-portrait-up
+            height: auto
+            padding: 20px 0
+
+
+        .responsive
+            height: 100%
+            width: 100%
+            max-width: $responsive
+            margin: auto
+            display: flex
+            flex-direction: row
+            justify-content: space-evenly
+            align-items: center
+            @include for-tablet-landscape-up
+                font-size: 10px
+            @include for-tablet-portrait-up
+                flex-direction: column
+            
+            .task
+                display: flex
+                flex-direction: column
+                justify-content: space-around
+                align-items: center
+                width: calc( 100% / 3  )
+                height: 80%
+                @include for-tablet-landscape-up
+                    height: 50%
+                    width: 70%
+
+                h1
+                    text-align: center
+                    color: white
+                img
+                    width: 50%
+                    @include for-tablet-landscape-up
+                        width: 60%
+
+    section.tails
+        width: 100%
+        height: 1200px
+        @include for-tablet-landscape-up
+            height: 1800px
+        background: url("../img/back.jpg") no-repeat fixed bottom
+        background-size: cover
+
+        .backdrop
+            backdrop-filter: blur(3px)
+            width: 100%
+            height: 100%
+            .responsive
+                height: 100%
+                width: 100%
+                max-width: $responsive
+                margin: auto
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: space-around
+
+                .card
+                    width: 90%
+                    border: 2px solid $color_1
+                    display: flex
+                    flex-direction: row
+                    align-items: center
+                    height: 250px
+                    @include for-tablet-landscape-up
+                        flex-direction: column
+                        align-items: normal
+                        width: 50%
+                        font-size: 13px
+                        height: 600px
+                    @include for-tablet-portrait-up
+                        width: 80%
+                    div
+                        height: 100%
+                        @include for-tablet-landscape-up
+                            width: 100%
+
+                    .image
+                        width: 25%
+                        @include for-tablet-landscape-up
+                            width: 100%
+                    .description
+                        width: 50%
+                        @include for-tablet-landscape-up
+                            width: 100%
+                        display: flex
+                        align-items: center
+                        text-align: center
+                        justify-content: center
+                        background: white
+                    .btn-block
+                        width: 25%
+                        @include for-tablet-landscape-up
+                            width: 100%
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        background: white
+                        a
+                            height: 40px
+                            @include for-tablet-landscape-up
+                                width: 80%
+                                height: 50px
+                    #img1
+                        background: url("../img/card1.jpg") right
+                        background-size: cover
+                    #img2
+                        background: url("../img/card2.jpg") left
+                        background-size: cover
+
+//FOOTER=======================================COPIED
+
+footer
+    width: 100%
+    background: #272727
+    .responsive
+        width: 100%
+        height: 100%
+        max-width: $responsive
+        margin: auto
+        display: flex
+        flex-direction: row
+        
+        @include for-big-desktop-up
+            flex-direction: column
+            align-items: center
+
+        .card
+            width: 25%
+            height: 200px
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+            color: #939393
+            font-size: 17px
+            font-family: sans-serif
+            letter-spacing: 2px
+            @include for-big-desktop-up
+                width: 100%
+                height: 100px
+        #author
+            background: #171717
+            
+
+//BUTTONS
+
+
+.btn-my
+    background: $color_3
+    color: white
+    height: 40px
+    width: 150px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 20px
+    transition-duration: 0.7s
+    &:hover
+        background: $color_2
+        //ALL UPPER COPIED -----------------------------------------------------------------------------------------------------------------------------------------------------
