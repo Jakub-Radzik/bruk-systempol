@@ -16,7 +16,11 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(48,4,0,0.45) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(48, 4, 0, 0.45) 100%
+  );
 }
 
 .gallery-hero-content {
@@ -36,7 +40,7 @@
 .gallery-hero-content p {
   font-size: 15px;
   letter-spacing: 2px;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -98,12 +102,14 @@ main section.gallery .responsive .column {
   overflow: hidden;
   border-radius: 8px;
   cursor: pointer;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 
 .gallery-item:hover {
-  box-shadow: 0 8px 32px rgba(0,0,0,0.28);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
   transform: translateY(-3px);
 }
 
@@ -156,15 +162,21 @@ main section.gallery .responsive .column {
   max-width: min(90vw, 1100px);
   max-height: 88vh;
   border-radius: 6px;
-  box-shadow: 0 24px 80px rgba(0,0,0,0.7);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.7);
   object-fit: contain;
   cursor: default;
   animation: lb-in 0.25s ease;
 }
 
 @keyframes lb-in {
-  from { opacity: 0; transform: scale(0.94); }
-  to   { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 #lightbox-close {
@@ -176,7 +188,9 @@ main section.gallery .responsive .column {
   line-height: 1;
   cursor: pointer;
   opacity: 0.7;
-  transition: opacity 0.2s, transform 0.2s;
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
   background: none;
   border: none;
   z-index: 1001;
@@ -192,7 +206,7 @@ main section.gallery .responsive .column {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.12);
   color: white;
   border: none;
   font-size: 2em;
@@ -207,8 +221,12 @@ main section.gallery .responsive .column {
   z-index: 1001;
 }
 
-#lightbox-prev { left: 20px; }
-#lightbox-next { right: 20px; }
+#lightbox-prev {
+  left: 20px;
+}
+#lightbox-next {
+  right: 20px;
+}
 
 #lightbox-prev:hover,
 #lightbox-next:hover {
@@ -220,7 +238,7 @@ main section.gallery .responsive .column {
   bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
-  color: rgba(255,255,255,0.55);
+  color: rgba(255, 255, 255, 0.55);
   font-size: 13px;
   letter-spacing: 2px;
   font-family: "Raleway", sans-serif;
