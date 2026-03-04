@@ -6,10 +6,7 @@
 
     <!-- Primary SEO -->
     <title>Galeria realizacji – Bruk-Systempol Zbigniew Radzik</title>
-    <meta
-      name="description"
-      content="Zobacz zdjęcia naszych realizacji brukarskich – kostka brukowa, chodniki, podjazdy, elewacje. Bruk-Systempol Zbigniew Radzik, Dolny Śląsk."
-    />
+    <meta name="description" content="Zobacz zdjęcia naszych realizacji brukarskich – kostka brukowa, chodniki, podjazdy, elewacje. Bruk-Systempol Zbigniew Radzik, Dolny Śląsk." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://bruk-systempol.pl/gallery.html" />
 
@@ -42,6 +39,7 @@
     <link rel="stylesheet" href="css/gallery.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/mobile-menu.js"></script>
+  </head>
   <body>
     <header id="main-header">
       <div class="responsive">
@@ -55,12 +53,7 @@
             <li><a href="contact.html" class="nav-link">Kontakt</a></li>
           </ul>
         </nav>
-
-        <button
-          class="mobile-btn"
-          aria-label="Otwórz menu"
-          aria-expanded="false"
-        >
+        <button class="mobile-btn" aria-label="Otwórz menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -105,7 +98,6 @@
             <div class="gallery-item loading"><img data-src="./img/gallery-images/64.jpg" alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk" /></div>
             <div class="gallery-item loading"><img data-src="./img/gallery-images/68.jpg" alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk" /></div>
           </div>
-
           <div class="column">
             <div class="gallery-item loading"><img data-src="./img/gallery-images/5.jpg" alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk" /></div>
             <div class="gallery-item loading"><img data-src="./img/gallery-images/9.jpg" alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk" /></div>
@@ -125,7 +117,6 @@
             <div class="gallery-item loading"><img data-src="./img/gallery-images/65.jpg" alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk" /></div>
             <div class="gallery-item loading"><img data-src="./img/gallery-images/63.jpg" alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk" /></div>
           </div>
-
           <div class="column">
             <div class="gallery-item loading"><img data-src="./img/gallery-images/2.jpg" alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk" /></div>
             <div class="gallery-item loading"><img data-src="./img/gallery-images/6.jpg" alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk" /></div>
@@ -146,7 +137,6 @@
             <div class="gallery-item loading"><img data-src="./img/gallery-images/66.jpg" alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk" /></div>
             <div class="gallery-item loading"><img data-src="./img/gallery-images/67.jpg" alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk" /></div>
           </div>
-
           <div class="column">
             <div class="gallery-item loading"><img data-src="./img/gallery-images/3.jpg" alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk" /></div>
             <div class="gallery-item loading"><img data-src="./img/gallery-images/7.jpg" alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk" /></div>
@@ -166,9 +156,6 @@
           </div>
         </div>
       </section>
-      <div class="gallery-load-more-wrap">
-        <button id="load-more-btn">ZAŁADUJ WIĘCEJ</button>
-      </div>
     </main>
 
     <!-- Lightbox -->
@@ -177,7 +164,7 @@
       <button id="lightbox-prev" aria-label="Poprzednie">&#8249;</button>
       <img id="lightbox-img" src="" alt="Powiększone zdjęcie" />
       <button id="lightbox-next" aria-label="Następne">&#8250;</button>
-      <div id="lightbox-counter"></div>
+      <div id="lightbox-counter"><\/div>
     </div>
 
     <footer>
@@ -209,22 +196,18 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 Bruk-Systempol Zbigniew Radzik. Wszelkie prawa zastrzeżone. | NIP: 913-141-01-28</p>
+        <p>© 2026 Bruk-Systempol Zbigniew Radzik. Wszelkie prawa zastrzeżone. | NIP: 913-164-43-81</p>
         <p class="footer-author">Stworzone przez <a href="mailto:jradzik4@gmail.com">Software-Systempol Jakub Radzik</a></p>
       </div>
     </footer>
 
     <script>
-      const BATCH = 20;
       const allItems = Array.from(document.querySelectorAll('.gallery-item'));
-      const loadMoreBtn = document.getElementById('load-more-btn');
-      let visible = 0;
 
-      // ── Skeleton → loaded on image decode ──
       function revealItem(item) {
         const img = item.querySelector('img');
         const src = img.dataset.src;
-        if (!src || img.src.includes(src.replace('./', ''))) return;
+        if (!src || img.src.includes(src.replace('.\/', ''))) return;
         const tmp = new Image();
         tmp.onload = () => {
           img.src = src;
@@ -234,7 +217,6 @@
         tmp.src = src;
       }
 
-      // ── IntersectionObserver for lazy load ──
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -242,38 +224,10 @@
             observer.unobserve(entry.target);
           }
         });
-      }, { rootMargin: '200px' });
+      }, { rootMargin: '300px' });
 
-      // ── Show first batch immediately, hide rest ──
-      allItems.forEach((item, i) => {
-        if (i >= BATCH) {
-          item.style.display = 'none';
-        } else {
-          observer.observe(item);
-          visible++;
-        }
-      });
+      allItems.forEach(item => observer.observe(item));
 
-      if (visible >= allItems.length) loadMoreBtn.style.display = 'none';
-
-      // ── Load more ──
-      loadMoreBtn.addEventListener('click', () => {
-        let shown = 0;
-        allItems.forEach(item => {
-          if (item.style.display === 'none' && shown < BATCH) {
-            item.style.display = 'block';
-            observer.observe(item);
-            shown++;
-            visible++;
-          }
-        });
-        if (visible >= allItems.length) {
-          loadMoreBtn.textContent = 'WSZYSTKIE ZDJĘCIA ZAŁADOWANE';
-          loadMoreBtn.disabled = true;
-        }
-      });
-
-      // ── Lightbox ──
       const lb = document.getElementById('lightbox');
       const lbImg = document.getElementById('lightbox-img');
       const lbCounter = document.getElementById('lightbox-counter');
@@ -290,6 +244,7 @@
                  || visibleItems[current].querySelector('img').dataset.src;
         lbImg.src = src;
         lbCounter.textContent = (current + 1) + ' / ' + visibleItems.length;
+        document.body.appendChild(lb);
         lb.classList.add('open');
         document.body.style.overflow = 'hidden';
       }
@@ -330,455 +285,5 @@
         if (e.key === 'ArrowRight') navigate(1);
       });
     </script>
-  </body>
-</html>
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/16.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/20.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/24.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/28.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/32.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/36.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/40.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/44.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/48.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/52.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/56.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/60.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/64.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/68.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-          </div>
-
-          <div class="column">
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/5.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/9.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/13.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/17.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/21.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/25.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/29.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/33.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/37.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/41.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/45.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/49.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/53.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/57.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/61.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/65.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/63.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-          </div>
-
-          <div class="column">
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/2.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/6.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/10.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/14.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/18.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/22.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/26.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/30.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/34.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/38.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/42.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/46.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/50.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/54.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/58.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/62.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/66.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/67.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-          </div>
-
-          <div class="column">
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/3.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/7.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/11.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/15.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/19.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/23.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/27.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/31.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/35.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/39.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/43.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/47.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/51.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/55.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-            <div class="gallery-item">
-              <img
-                src="./img/gallery-images/59.jpg"
-                alt="Realizacja brukarsko-układarska – Bruk-Systempol Dolny Śląsk"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Lightbox -->
-    <div id="lightbox">
-      <button id="lightbox-close" aria-label="Zamknij">&times;</button>
-      <button id="lightbox-prev" aria-label="Poprzednie">&#8249;</button>
-      <img id="lightbox-img" src="" alt="Powiększone zdjęcie" />
-      <button id="lightbox-next" aria-label="Następne">&#8250;</button>
-      <div id="lightbox-counter"></div>
-    </div>
-    <footer>
-      <div class="responsive">
-        <div class="footer-brand">
-          <img
-            src="img/logo.png"
-            alt="logo-bruksystempol"
-            class="footer-logo"
-          />
-          <p>Kompleksowe usługi brukarskie<br />na terenie Dolnego Śląska</p>
-        </div>
-        <div class="footer-links">
-          <h4>NAWIGACJA</h4>
-          <a href="index.html">Strona główna</a>
-          <a href="gallery.html">Galeria</a>
-          <a href="contact.html">Kontakt</a>
-        </div>
-        <div class="footer-contact">
-          <h4>KONTAKT</h4>
-          <div class="card">
-            <img src="img/map_mark.png" alt="" class="icon" />
-            <p class="description">55-330 Brzezina, Spacerowa 4</p>
-          </div>
-          <div class="card">
-            <img src="img/list.png" alt="" class="icon" />
-            <p class="description">radzik-bruki@wp.pl</p>
-          </div>
-          <div class="card">
-            <img src="img/phone.png" alt="" class="icon" />
-            <p class="description">509-626-039</p>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>
-          © 2026 Bruk-Systempol Zbigniew Radzik. Wszelkie prawa zastrzeżone. | NIP: 913-164-43-81
-        </p>
-        <p class="footer-author">
-          Stworzone przez <a href="mailto:jradzik4@gmail.com">Software-Systempol Jakub Radzik</a>
-        </p>
-      </div>
-    </footer>
   </body>
 </html>
