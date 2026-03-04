@@ -1,160 +1,251 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bruk-systempol</title>
-    <meta name="description" content="Nasza firma świadczy wysokiej jakości, kompleksowe prace brukarskie na terenie dolnego śląska. Od kilku lat, nieprzerwanie wykonujemy nasze zlecenia ku zadowoleniu naszych klientów.">
-    <meta name="keywords" content="bruki, bruk-systempol, bruki wrocław, Zbigniew Radzik, Radzik">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/gradient.css">
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bruk-systempol – Zbigniew Radzik</title>
+    <meta
+      name="description"
+      content="Nasza firma świadczy wysokiej jakości, kompleksowe prace brukarskie na terenie dolnego śląska. Od kilku lat, nieprzerwanie wykonujemy nasze zlecenia ku zadowoleniu naszych klientów."
+    />
+    <meta
+      name="keywords"
+      content="bruki, bruk-systempol, bruki wrocław, Zbigniew Radzik, Radzik, mycie elewacji, mycie kostki brukowej, impregnacja"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/gradient.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/mobile-menu.js"></script>
-    <link rel="stylesheet" href="css/wiz.css">
-</head>
-<body>
-<!--HEADER IS DONE-->
-    <header>
-        <div class="responsive">
-            <div class="logo">
-                <img src="img/logo.png" alt="logo-bruksystempol">
-            </div>
-            <nav class="standard">
-                <ul>
-                    <li>
-                        <a href="index.html">Strona główna</a>
-                    </li>
-                    <li>
-                        <a href="gallery.html">Galeria</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Kontakt</a>
-                    </li>
-                </ul>
-            </nav>
-
-            <div class="mobile-btn">
-                <img src="img/menu.png" alt="">
-            </div>
-
+    <link rel="stylesheet" href="css/wiz.css" />
+  </head>
+  <body>
+    <!--HEADER IS DONE-->
+    <header id="main-header">
+      <div class="responsive">
+        <div class="logo">
+          <img src="img/logo.png" alt="logo-bruksystempol" />
         </div>
-        <nav class="mobile">
-            <ul>
-                <a href="index.html">
-                    <li>
-                        Strona główna
-                    </li>
-                </a>
-                <a href="gallery.html">
-                    <li>
-                        Galeria
-                    </li>
-                </a>
-                <a href="contact.html">
-                    <li>
-                        Kontakt
-                    </li>
-                </a>
-            </ul>
+        <nav class="standard">
+          <ul>
+            <li>
+              <a href="index.html" class="nav-link active">Strona główna</a>
+            </li>
+            <li>
+              <a href="gallery.html" class="nav-link">Galeria</a>
+            </li>
+            <li>
+              <a href="contact.html" class="nav-link">Kontakt</a>
+            </li>
+          </ul>
         </nav>
+
+        <button
+          class="mobile-btn"
+          aria-label="Otwórz menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="mobile" aria-hidden="true">
+        <ul>
+          <li><a href="index.html" class="active">Strona główna</a></li>
+          <li><a href="gallery.html">Galeria</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
     </header>
-    
+
     <main>
-        <section class="presentation">
-            <div class="responsive">
-                <div class="information">
-                    <h1>BRUK-SYSTEMPOL<br>ZBIGNIEW RADZIK</h1>
-                    <p>Nasza firma świadczy wysokiej jakości, kompleksowe prace brukarskie na terenie dolnego śląska. Od kilku lat, nieprzerwanie wykonujemy nasze zlecenia ku zadowoleniu naszych klientów.</p>
-                    <a href="gallery.html">
-                        <div class="btn-my">GALERIA</div>
-                    </a>
-                </div>
+      <section class="presentation">
+        <div class="hero-overlay"></div>
+        <div class="responsive">
+          <div class="information">
+            <span class="hero-tag">Dolny Śląsk i okolice</span>
+            <h1>BRUK-SYSTEMPOL<br />ZBIGNIEW RADZIK</h1>
+            <p>
+              Kompleksowe prace brukarskie, mycie elewacji i impregnacja –
+              wysoka jakość potwierdzona przez zadowolonych klientów.
+            </p>
+            <div class="hero-btns">
+              <a href="gallery.html">
+                <div class="btn-my">GALERIA</div>
+              </a>
+              <a href="contact.html">
+                <div class="btn-my btn-outline">KONTAKT</div>
+              </a>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section class="tasks">
-            <div class="responsive">
-                <div class="task">
-                    <img src="img/bricks.png" alt="">
-                    <h1>USŁUGI BRUKARSKIE
-                        Z KOSTKI GRANITOWEJ, 
-                        BETONOWEJ I INNYCH</h1>
-                </div>
-                <div class="task">
-                    <img src="img/hand.png" alt="">
-                    <h1>OGRODZENIA SIATKOWE I ODWODNIENIE TERENU</h1>
-                </div>
-                <div class="task">
-                    <img src="img/eco.png" alt="">
-                    <h1>ARANŻACJA I WYKONANIE ZIELENI</h1>
-                </div>
+      <section class="tasks">
+        <div class="tasks-header">
+          <h2>NASZE USŁUGI</h2>
+          <div class="tasks-divider"></div>
+        </div>
+        <div class="responsive">
+          <div class="task">
+            <div class="task-icon">🧱</div>
+            <h3>USŁUGI BRUKARSKIE</h3>
+            <p>
+              Kostka granitowa, betonowa i inne materiały układane z precyzją i
+              dbałością o detal.
+            </p>
+          </div>
+          <div class="task">
+            <div class="task-icon">🏗️</div>
+            <h3>OGRODZENIA I ODWODNIENIE</h3>
+            <p>
+              Ogrodzenia siatkowe oraz profesjonalne systemy odwodnienia terenu.
+            </p>
+          </div>
+          <div class="task">
+            <div class="task-icon">🌿</div>
+            <h3>ARANŻACJA ZIELENI</h3>
+            <p>
+              Projektowanie i wykonanie terenów zielonych dopasowanych do Twoich
+              potrzeb.
+            </p>
+          </div>
+          <div class="task task-new">
+            <div class="task-icon">🏢</div>
+            <h3>MYCIE ELEWACJI</h3>
+            <p>
+              Profesjonalne mycie elewacji budynków – skuteczne usuwanie
+              zanieczyszczeń, glonów i mchu.
+            </p>
+          </div>
+          <div class="task task-new">
+            <div class="task-icon">✨</div>
+            <h3>MYCIE I IMPREGNACJA KOSTKI</h3>
+            <p>
+              Mycie kostki brukowej oraz impregnacja – odnowiona nawierzchnia z
+              długotrwałą ochroną.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="new-services">
+        <div class="responsive">
+          <div class="ns-card">
+            <div class="ns-icon">🏢</div>
+            <div class="ns-content">
+              <span class="ns-badge">NOWOŚĆ</span>
+              <h2>Mycie elewacji budynków</h2>
+              <p>
+                Oferujemy profesjonalne usługi mycia elewacji budynków
+                mieszkalnych i komercyjnych. Skutecznie usuwamy
+                zanieczyszczenia, glony, mech i zabrudzenia, przywracając
+                budynkowi pierwotny wygląd. Używamy sprawdzonych środków i metod
+                dostosowanych do rodzaju elewacji.
+              </p>
+              <a href="contact.html"
+                ><div class="btn-my">ZAPYTAJ O WYCENĘ</div></a
+              >
             </div>
-        </section>
-
-        <section class="tails">
-            <div class="backdrop">
-                <div class="responsive">
-
-                    <div class="wiz">
-                        <div class="front"></div>
-                        <div class="back"></div>
-                    </div>
-
-
-                    <div class="card">
-                        <div class="image" id="img1"></div>
-                        <div class="description">
-                            <h2>
-                                ZOBACZ JAK WYKONUJEMY POWIERZONE NAM ZADANIA
-                            </h2>
-                        </div>
-                        <div class="btn-block">
-                            <a href="gallery.html">
-                                <div class="btn-my">GALERIA</div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="image" id="img2"></div>
-                        <div class="description">
-                            <h2>
-                                SKONTAKTUJ SIĘ Z NAMI
-                            </h2>
-                        </div>
-                        <div class="btn-block">
-                            <a href="contact.html">
-                                <div class="btn-my">KONTAKT</div>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
+          </div>
+          <div class="ns-card ns-card-reverse">
+            <div class="ns-icon">✨</div>
+            <div class="ns-content">
+              <span class="ns-badge">NOWOŚĆ</span>
+              <h2>Mycie kostki brukowej & impregnacja</h2>
+              <p>
+                Przywracamy blask Twojej kostki brukowej poprzez głębokie mycie
+                ciśnieniowe. Następnie nakładamy profesjonalne środki
+                impregnujące, które chronią nawierzchnię przed wilgocią, plamami
+                i chwastami – nawet przez kilka lat.
+              </p>
+              <a href="contact.html"
+                ><div class="btn-my">ZAPYTAJ O WYCENĘ</div></a
+              >
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
+      <section class="tails">
+        <div class="backdrop">
+          <div class="responsive">
+            <div class="wiz-wrapper">
+              <div class="wiz">
+                <div class="front"></div>
+                <div class="back"></div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="image" id="img1"></div>
+              <div class="description">
+                <h2>ZOBACZ JAK WYKONUJEMY POWIERZONE NAM ZADANIA</h2>
+              </div>
+              <div class="btn-block">
+                <a href="gallery.html">
+                  <div class="btn-my">GALERIA</div>
+                </a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="image" id="img2"></div>
+              <div class="description">
+                <h2>SKONTAKTUJ SIĘ Z NAMI</h2>
+              </div>
+              <div class="btn-block">
+                <a href="contact.html">
+                  <div class="btn-my">KONTAKT</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="responsive">
-            <div class="card">
-                <img src="img/map_mark.png" alt="" class="icon">
-                <p class="description">55-330 Brzezina, Spacerowa 4</p>
-            </div>
-            <div class="card">
-                <img src="img/list.png" alt="" class="icon">
-                <p class="description">radzik-bruki@wp.pl</p>
-            </div>
-            <div class="card">
-                <img src="img/phone.png" alt="" class="icon">
-                <p class="description">509-626-039</p>
-            </div>
-            <div class="card" id="author">
-                <span>Stworzone przez</span>
-                <span>Jakub Radzik</span>
-                <span>jradzik4@gmail.com</span>
-            </div>
+      <div class="responsive">
+        <div class="footer-brand">
+          <img
+            src="img/logo.png"
+            alt="logo-bruksystempol"
+            class="footer-logo"
+          />
+          <p>Kompleksowe usługi brukarskie<br />na terenie Dolnego Śląska</p>
         </div>
+        <div class="footer-links">
+          <h4>NAWIGACJA</h4>
+          <a href="index.html">Strona główna</a>
+          <a href="gallery.html">Galeria</a>
+          <a href="contact.html">Kontakt</a>
+        </div>
+        <div class="footer-contact">
+          <h4>KONTAKT</h4>
+          <div class="card">
+            <img src="img/map_mark.png" alt="" class="icon" />
+            <p class="description">55-330 Brzezina, Spacerowa 4</p>
+          </div>
+          <div class="card">
+            <img src="img/list.png" alt="" class="icon" />
+            <p class="description">radzik-bruki@wp.pl</p>
+          </div>
+          <div class="card">
+            <img src="img/phone.png" alt="" class="icon" />
+            <p class="description">509-626-039</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          © 2026 Bruk-Systempol Zbigniew Radzik. Wszelkie prawa zastrzeżone.
+        </p>
+        <p class="footer-author">
+          Stworzone przez <a href="mailto:jradzik4@gmail.com">Jakub Radzik</a>
+        </p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

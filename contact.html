@@ -1,109 +1,95 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bruk-systempol</title>
-    <link rel="stylesheet" href="css/style.css">
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt – Bruk-systempol</title>
+    <link rel="stylesheet" href="css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/mobile-menu.js"></script>
     <meta name="robots" content="noindex" />
-</head>
-<body>
-    <header>
-        <div class="responsive">
-            <div class="logo">
-                <img src="img/logo.png" alt="logo-bruksystempol">
-            </div>
-            <nav class="standard">
-                <ul>
-                    <li>
-                        <a href="index.html">Strona główna</a>
-                    </li>
-                    <li>
-                        <a href="gallery.html">Galeria</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Kontakt</a>
-                    </li>
-                </ul>
-            </nav>
-
-            <div class="mobile-btn">
-                <img src="img/menu.png" alt="">
-            </div>
-
+  </head>
+  <body>
+    <header id="main-header">
+      <div class="responsive">
+        <div class="logo">
+          <img src="img/logo.png" alt="logo-bruksystempol" />
         </div>
-        <nav class="mobile">
-            <ul>
-                <a href="index.html">
-                    <li>
-                        Strona główna
-                    </li>
-                </a>
-                <a href="gallery.html">
-                    <li>
-                        Galeria
-                    </li>
-                </a>
-                <a href="contact.html">
-                    <li>
-                        Kontakt
-                    </li>
-                </a>
-            </ul>
+        <nav class="standard">
+          <ul>
+            <li><a href="index.html" class="nav-link">Strona główna</a></li>
+            <li><a href="gallery.html" class="nav-link">Galeria</a></li>
+            <li><a href="contact.html" class="nav-link active">Kontakt</a></li>
+          </ul>
         </nav>
+
+        <button
+          class="mobile-btn"
+          aria-label="Otwórz menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="mobile" aria-hidden="true">
+        <ul>
+          <li><a href="index.html">Strona główna</a></li>
+          <li><a href="gallery.html">Galeria</a></li>
+          <li><a href="contact.html" class="active">Kontakt</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
-        <section class="contact">
-            <div class="responsive">
-                <img src="img/logo.png" alt="logo">
-                <div class="info">
-                    <div class="pair">
-                        <div class="icon"><img src="img/email.svg" alt=""></div>
-                        <div class="description" style="color:#36291b">
-                            <h1>radzik-bruki@wp.pl</h1>
-                        </div>
-                    </div>
-                    <div class="pair">
-                        <div class="icon"><img src="img/phone-call.svg" alt=""></div>
-                        <div class="description" style="color: #534b43">
-                            <h1>509-626-039</h1>
-                        </div>
-                    </div>
-                    <div class="pair">
-                        <div class="icon"><img src="img/home.svg" alt=""></div>
-                        <div class="description" style="color:#96581a">
-                            <h1>55-330 Brzezina, Spacerowa 4</h1>
-                        </div>
-                    </div>
-                </div>
+      <section class="contact">
+        <div class="responsive">
+          <img src="img/logo.png" alt="logo" />
+          <div class="info">
+            <div class="pair">
+              <div class="icon"><img src="img/email.svg" alt="" /></div>
+              <div class="description" style="color: #36291b">
+                <h1>radzik-bruki@wp.pl</h1>
+              </div>
             </div>
-        </section>
-
+            <div class="pair">
+              <div class="icon"><img src="img/phone-call.svg" alt="" /></div>
+              <div class="description" style="color: #534b43">
+                <h1>509-626-039</h1>
+              </div>
+            </div>
+            <div class="pair">
+              <div class="icon"><img src="img/home.svg" alt="" /></div>
+              <div class="description" style="color: #96581a">
+                <h1>55-330 Brzezina, Spacerowa 4</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="responsive">
-            <div class="card">
-                <img src="img/map_mark.png" alt="" class="icon">
-                <p class="description">55-330 Brzezina, Spacerowa 4</p>
-            </div>
-            <div class="card">
-                <img src="img/list.png" alt="" class="icon">
-                <p class="description">radzik-bruki@wp.pl</p>
-            </div>
-            <div class="card">
-                <img src="img/phone.png" alt="" class="icon">
-                <p class="description">509-626-039</p>
-            </div>
-            <div class="card" id="author">
-                <span>Stworzone przez</span>
-                <span>Jakub Radzik</span>
-                <span>jradzik4@gmail.com</span>
-            </div>
+      <div class="responsive">
+        <div class="card">
+          <img src="img/map_mark.png" alt="" class="icon" />
+          <p class="description">55-330 Brzezina, Spacerowa 4</p>
         </div>
+        <div class="card">
+          <img src="img/list.png" alt="" class="icon" />
+          <p class="description">radzik-bruki@wp.pl</p>
+        </div>
+        <div class="card">
+          <img src="img/phone.png" alt="" class="icon" />
+          <p class="description">509-626-039</p>
+        </div>
+        <div class="card" id="author">
+          <span>Stworzone przez</span>
+          <span>Jakub Radzik</span>
+          <span>jradzik4@gmail.com</span>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

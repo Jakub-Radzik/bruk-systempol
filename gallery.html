@@ -1,168 +1,228 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bruk-systempol</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/gallery.css">
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galeria – Bruk-systempol</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/gallery.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/mobile-menu.js"></script>
     <meta name="robots" content="noindex" />
-</head>
-<body>
-<header>
-    <div class="responsive">
+  </head>
+  <body>
+    <header id="main-header">
+      <div class="responsive">
         <div class="logo">
-            <img src="img/logo.png" alt="logo-bruksystempol">
+          <img src="img/logo.png" alt="logo-bruksystempol" />
         </div>
         <nav class="standard">
-            <ul>
-                <li>
-                    <a href="index.html">Strona główna</a>
-                </li>
-                <li>
-                    <a href="gallery.html">Galeria</a>
-                </li>
-                <li>
-                    <a href="contact.html">Kontakt</a>
-                </li>
-            </ul>
+          <ul>
+            <li><a href="index.html" class="nav-link">Strona główna</a></li>
+            <li><a href="gallery.html" class="nav-link active">Galeria</a></li>
+            <li><a href="contact.html" class="nav-link">Kontakt</a></li>
+          </ul>
         </nav>
 
-        <div class="mobile-btn">
-            <img src="img/menu.png" alt="">
-        </div>
-
-    </div>
-    <nav class="mobile">
+        <button
+          class="mobile-btn"
+          aria-label="Otwórz menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="mobile" aria-hidden="true">
         <ul>
-            <a href="index.html">
-                <li>
-                    Strona główna
-                </li>
-            </a>
-            <a href="gallery.html">
-                <li>
-                    Galeria
-                </li>
-            </a>
-            <a href="contact.html">
-                <li>
-                    Kontakt
-                </li>
-            </a>
+          <li><a href="index.html">Strona główna</a></li>
+          <li><a href="gallery.html" class="active">Galeria</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
         </ul>
-    </nav>
-</header>
+      </nav>
+    </header>
 
-<main>
-    <section class="gallery">
-        <div class="responsive">
-            <div class="column">
-                <img src="./img/gallery-images/4.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/8.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/12.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/16.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/20.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/24.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/28.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/32.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/36.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/40.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/44.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/48.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/52.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/56.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/60.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/64.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/68.jpg" alt="gallery image"/>
-            </div>
-
-            <div class="column">
-                <img src="./img/gallery-images/5.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/9.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/13.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/17.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/21.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/25.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/29.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/33.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/37.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/41.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/45.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/49.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/53.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/57.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/61.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/65.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/63.jpg" alt="gallery image"/>
-            </div>
-
-            <div class="column">
-                <img src="./img/gallery-images/2.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/6.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/10.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/14.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/18.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/22.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/26.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/30.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/34.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/38.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/42.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/46.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/50.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/54.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/58.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/62.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/66.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/67.jpg" alt="gallery image"/>
-            </div>
-
-            <div class="column">
-                <img src="./img/gallery-images/3.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/7.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/11.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/15.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/19.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/23.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/27.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/31.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/35.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/39.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/43.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/47.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/51.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/55.jpg" alt="gallery image"/>
-                <img src="./img/gallery-images/59.jpg" alt="gallery image"/>
-            </div>
-
-        </div>
-    </section>
-
-</main>
-
-<footer>
-    <div class="responsive">
-        <div class="card">
-            <img src="img/map_mark.png" alt="" class="icon">
-            <p class="description">55-330 Brzezina, Spacerowa 4</p>
-        </div>
-        <div class="card">
-            <img src="img/list.png" alt="" class="icon">
-            <p class="description">radzik-bruki@wp.pl</p>
-        </div>
-        <div class="card">
-            <img src="img/phone.png" alt="" class="icon">
-            <p class="description">509-626-039</p>
-        </div>
-        <div class="card" id="author">
-            <span>Stworzone przez</span>
-            <span>Jakub Radzik</span>
-            <span>jradzik4@gmail.com</span>
-        </div>
+    <div class="gallery-hero">
+      <div class="gallery-hero-content">
+        <h1>GALERIA REALIZACJI</h1>
+        <div class="gallery-hero-divider"></div>
+        <p>Nasze prace – każde zlecenie z pasją i precyzją</p>
+      </div>
     </div>
-</footer>
-</body>
+
+    <main>
+      <section class="gallery">
+        <div class="responsive">
+          <div class="column">
+            <div class="gallery-item"><img src="./img/gallery-images/4.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/8.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/12.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/16.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/20.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/24.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/28.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/32.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/36.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/40.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/44.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/48.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/52.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/56.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/60.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/64.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/68.jpg" alt="Realizacja brukarskia" /></div>
+          </div>
+
+          <div class="column">
+            <div class="gallery-item"><img src="./img/gallery-images/5.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/9.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/13.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/17.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/21.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/25.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/29.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/33.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/37.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/41.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/45.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/49.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/53.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/57.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/61.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/65.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/63.jpg" alt="Realizacja brukarskia" /></div>
+          </div>
+
+          <div class="column">
+            <div class="gallery-item"><img src="./img/gallery-images/2.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/6.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/10.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/14.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/18.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/22.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/26.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/30.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/34.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/38.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/42.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/46.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/50.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/54.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/58.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/62.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/66.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/67.jpg" alt="Realizacja brukarskia" /></div>
+          </div>
+
+          <div class="column">
+            <div class="gallery-item"><img src="./img/gallery-images/3.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/7.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/11.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/15.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/19.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/23.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/27.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/31.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/35.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/39.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/43.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/47.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/51.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/55.jpg" alt="Realizacja brukarskia" /></div>
+            <div class="gallery-item"><img src="./img/gallery-images/59.jpg" alt="Realizacja brukarskia" /></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox">
+      <button id="lightbox-close" aria-label="Zamknij">&times;</button>
+      <button id="lightbox-prev" aria-label="Poprzednie">&#8249;</button>
+      <img id="lightbox-img" src="" alt="Powiększone zdjęcie" />
+      <button id="lightbox-next" aria-label="Następne">&#8250;</button>
+      <div id="lightbox-counter"></div>
+    </div>
+    <footer>
+      <div class="responsive">
+        <div class="footer-brand">
+          <img src="img/logo.png" alt="logo-bruksystempol" class="footer-logo" />
+          <p>Kompleksowe usługi brukarskie<br />na terenie Dolnego Śląska</p>
+        </div>
+        <div class="footer-links">
+          <h4>NAWIGACJA</h4>
+          <a href="index.html">Strona główna</a>
+          <a href="gallery.html">Galeria</a>
+          <a href="contact.html">Kontakt</a>
+        </div>
+        <div class="footer-contact">
+          <h4>KONTAKT</h4>
+          <div class="card">
+            <img src="img/map_mark.png" alt="" class="icon" />
+            <p class="description">55-330 Brzezina, Spacerowa 4</p>
+          </div>
+          <div class="card">
+            <img src="img/list.png" alt="" class="icon" />
+            <p class="description">radzik-bruki@wp.pl</p>
+          </div>
+          <div class="card">
+            <img src="img/phone.png" alt="" class="icon" />
+            <p class="description">509-626-039</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Bruk-Systempol Zbigniew Radzik. Wszelkie prawa zastrzeżone.</p>
+        <p class="footer-author">Stworzone przez <a href="mailto:jradzik4@gmail.com">Jakub Radzik</a></p>
+      </div>
+    </footer>
+
+    <script>
+      const items = Array.from(document.querySelectorAll('.gallery-item'));
+      const lb = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightbox-img');
+      const lbCounter = document.getElementById('lightbox-counter');
+      let current = 0;
+
+      function openLightbox(index) {
+        current = index;
+        lbImg.src = items[current].querySelector('img').src;
+        lbCounter.textContent = (current + 1) + ' / ' + items.length;
+        lb.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lb.classList.remove('open');
+        document.body.style.overflow = '';
+        lbImg.src = '';
+      }
+
+      function navigate(dir) {
+        current = (current + dir + items.length) % items.length;
+        lbImg.style.opacity = 0;
+        setTimeout(() => {
+          lbImg.src = items[current].querySelector('img').src;
+          lbCounter.textContent = (current + 1) + ' / ' + items.length;
+          lbImg.style.opacity = 1;
+        }, 150);
+      }
+
+      items.forEach((item, i) => item.addEventListener('click', () => openLightbox(i)));
+
+      document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+      document.getElementById('lightbox-prev').addEventListener('click', (e) => { e.stopPropagation(); navigate(-1); });
+      document.getElementById('lightbox-next').addEventListener('click', (e) => { e.stopPropagation(); navigate(1); });
+
+      lb.addEventListener('click', (e) => { if (e.target === lb) closeLightbox(); });
+
+      document.addEventListener('keydown', (e) => {
+        if (!lb.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') navigate(-1);
+        if (e.key === 'ArrowRight') navigate(1);
+      });
+    </script>
+  </body>
 </html>

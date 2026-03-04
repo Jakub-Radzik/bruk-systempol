@@ -1,35 +1,53 @@
+.wiz-wrapper {
+  perspective: 1200px;
+  width: 534px;
+  height: 354px;
+}
+
 .wiz {
   width: 534px;
   height: 354px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.9s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  cursor: pointer;
+}
 
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s; }
+.wiz-wrapper:hover .wiz {
+  transform: rotateY(180deg);
+}
 
-  .wiz:hover {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg); }
-  .wiz .front {
-    height: 354px;
-    width: 534px;
-    background: red;
-    position: absolute;
-    background: url("../img/strona1.png");
-    background-position: center;
-    background-size: cover; }
-  .wiz .back {
-    height: 354px;
-    width: 534px;
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    background: url("../img/strona2.png") center;
-    background-size: cover; }
+.wiz .front,
+.wiz .back {
+  position: absolute;
+  inset: 0;
+  width: 534px;
+  height: 354px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+}
+
+.wiz .front {
+  background-image: url("../img/strona1.png");
+}
+
+.wiz .back {
+  background-image: url("../img/strona2.png");
+  transform: rotateY(180deg);
+}
 
 @media (max-width: 600px) {
-  .wiz, .wiz .front, .wiz .back {
+  .wiz-wrapper,
+  .wiz,
+  .wiz .front,
+  .wiz .back {
     width: 267px;
     height: 177px;
   }
+}
 
 /*# sourceMappingURL=wiz.css.map */
