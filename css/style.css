@@ -442,6 +442,60 @@ main section.tasks .responsive .task p {
   }
 }
 
+/* ===== FAREWELL / THANK YOU SECTION ===== */
+section.farewell {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+  color: #ffffff;
+}
+
+section.farewell .responsive {
+  display: flex;
+  justify-content: center;
+}
+
+.farewell-inner {
+  max-width: 780px;
+  text-align: center;
+}
+
+.farewell-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.farewell-inner h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: 0.04em;
+  margin-bottom: 28px;
+  color: #f0a500;
+}
+
+.farewell-inner p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #d4d8e2;
+  margin-bottom: 20px;
+}
+
+.farewell-inner p strong {
+  color: #ffffff;
+}
+
+.farewell-badge {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 32px;
+  background: #f0a500;
+  color: #1a1a2e;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
 /* ===== NEW SERVICES SECTION ===== */
 section.new-services {
   width: 100%;
